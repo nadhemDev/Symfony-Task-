@@ -22,12 +22,16 @@ class BlogController extends AbstractController
      */
     public function home()
     {
-        return $this->render('blog/home.html.twig',[
+        return $this->render('blog/home.html.twig', [
             'title' => "Bienvenue ici les amis !",
             'age' => 31
         ]);
-        
     }
 
- 
+    /**
+     * @route ("/blog/article/12" , name="blog_show) 
+     */
+    public function show(){
+        return $this->render('blog/show.html.twig');
+    }
 }
